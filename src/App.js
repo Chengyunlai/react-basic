@@ -14,6 +14,19 @@ function Button(){
 
 const flag = false
 
+const user_role = 'vip'
+
+function is_vip(){
+  if (user_role  === 'vip')
+    return <p>hi is vip</p>
+  else
+    return <p>hi is normal</p>
+}
+
+function handleClick(){
+  console.log(1)
+}
+
 function App() {
   return (
     <div className="App">
@@ -22,6 +35,8 @@ function App() {
       <ul>
         {students.map(item =><item key={item.id}>{item.name}<Button></Button></item>)}
       </ul>
+      {is_vip()}
+      <button onClick={handleClick}>Click</button>
     </div>
   );
 }
