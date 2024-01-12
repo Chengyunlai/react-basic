@@ -12,12 +12,13 @@ function Button(){
   )
 }
 
-const falg = false
+const flag = false
 
 function App() {
   return (
     <div className="App">
-      { falg && "hello"}
+      { flag && "hello"}
+      { flag ? "true":"false"}
       <ul>
         {students.map(item =><item key={item.id}>{item.name}<Button></Button></item>)}
       </ul>
