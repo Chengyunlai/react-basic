@@ -23,8 +23,8 @@ function is_vip(){
     return <p>hi is normal</p>
 }
 
-function handleClick(){
-  console.log(1)
+function handleClick(flag,e){
+  console.log(flag,e)
 }
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         {students.map(item =><item key={item.id}>{item.name}<Button></Button></item>)}
       </ul>
       {is_vip()}
-      <button onClick={handleClick}>Click</button>
+      <button onClick={(e)=>{handleClick(flag,e)}}>Click</button>
     </div>
   );
 }
